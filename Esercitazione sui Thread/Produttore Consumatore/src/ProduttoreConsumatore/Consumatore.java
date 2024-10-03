@@ -20,16 +20,15 @@ public class Consumatore implements Runnable{
 			n = buffer.Pop();
 			
 			//Controllo se il numero e pari o dispari
-			if(n%2 == 0) {
+			if(n % 2 == 0) {
 				nPari++;
 			}else{
 				nDispari++;
 			}
 			nTotali++;
-			
 			//Stampa prima il numero e poi la statistica
-			System.out.println("ho tirato fuori" + n);
-			System.out.println((nPari/nTotali)*100 + "% di numeri pari e " + (nDispari/nTotali)*100 + "% di numeri dispari");
+			System.out.println("ho tirato fuori " + n);
+			System.out.println(((nPari*100)/nTotali) + "% di numeri pari e " + ((nDispari*100)/nTotali) + "% di numeri dispari");
 			
 			//Attende 120ms
 			try {
