@@ -5,8 +5,7 @@ Jetty -> server web usato per il deploy e l'esecuzione dell'applicazione
 Servlets 3.0+ -> per la configurazione descriptor-less, quindi senza file web.xml. Estende ResourceConfig e annota con @ApplicationPath
 
 Come utilizzarlo:
-Per avviare il server con jetty bisogna eseguire il comando mvn jetty:run per avviare il server e poi accedere alla porta 8080 sul localhost
+Il progetto si suddivide in due sottoprogetti, il server ed il client.Per avviare il server con jetty bisogna eseguire il comando mvn jetty:run per avviare il server e poi accedere alla porta 8080 sul localhost. Per avviare il client bisogna aprirne il progetto ed avviare il main che esegue le richieste HTTP
 
 NOTE:
--Molte versione delle dipendenze erano obsolete e quindi ho dovuto aggiornarle
--La parte delle API non funziona in quanto il tutorial risulta oramai obsoleto come molte versioni delle dipendenze. Ho fatto vari tentativi ma il server continua a restituirmi errore 404 sulle API
+-C'è un problema nell'eseguire le richieste GET in al server dato che continuano a ritornare un errore a runtime sul server stesso. Indagando forse il problema potrebbe essere nella conversione delle informazioni in JSON dato l'errore che viene mostrato
